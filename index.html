@@ -207,6 +207,7 @@
         <div class="controls">
           <button class="btn btn-primary" id="end-turn">End Turn</button>
           <button class="btn btn-danger" id="resign" title="Leave the match — the opponent is awarded the win">Resign</button>
+          <button class="btn" id="restart" title="Abandon this match and start a fresh one — no result is recorded">Restart</button>
           <button class="btn btn-primary" id="rematch" style="display:none" title="Start a fresh match; the other player moves first">Rematch</button>
           <button class="btn" id="export-state" title="Save the exact board for bug reports">Export State</button>
         </div>
@@ -216,6 +217,13 @@
             <button class="btn btn-danger" id="resign-a">Player A resigns</button>
             <button class="btn btn-danger" id="resign-b">Player B resigns</button>
             <button class="btn" id="resign-cancel">Cancel</button>
+          </div>
+        </div>
+        <div class="panel resign-dialog" id="restart-dialog" style="display:none" role="dialog" aria-label="Confirm restart">
+          <p class="dialog-text">Restart abandons the current match without a result and starts a fresh one with the same settings. Both players should agree before continuing.</p>
+          <div class="controls">
+            <button class="btn btn-danger" id="restart-confirm">Restart match</button>
+            <button class="btn" id="restart-cancel">Cancel</button>
           </div>
         </div>
         <div class="panel">
